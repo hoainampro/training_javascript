@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="password" name="" id="textname">
+  <button type="button" id="submit">click</button>
+  <p id="shows"></p>
+  <script>
+    var input = document.getElementById('textname');
+    document.getElementById('submit').addEventListener('click', function() {
+      document.getElementById('shows').innerHTML = input.value;
+    });
+  </script>
+</body>
+</html>

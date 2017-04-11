@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>basic_cobannhaptenxuat</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <input type="text" name="" placeholder="input" id="input_name"><br>
+    <input type="submit" name="" id="submit">
+    <p id="shows"></p>
+  </body>
+  <script type="text/javascript">
+     // function Show_name() {
+     //    document.getElementsById('shows').innerHTML = document.getElementsByName('input_name').value;
+     //  }
+    var input = document.getElementById('input_name');
+    document.getElementById('submit').addEventListener('click', function() {
+      document.getElementById('shows').innerHTML = input.value;
+    });
+
+  </script>
+</html>

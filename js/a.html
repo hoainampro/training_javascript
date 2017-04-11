@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM & BOM</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <div id="nhapnumber">
+    <input type="text" name="nhapnumber" value="">
+    <a href="" title="" onclick="submit()">aaaa</a>
+    <div>
+      <ul id="sub">
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+  var name = document.getElementsByName('nhapnumber');
+  var obj = document.getElementById('sub');
+
+  var list = [];
+
+  function submit() {
+    list.push(name[0].value);
+    console.log(list);
+    var html = '';
+    // for(var i = 0 ; i < 5 ; i++) {
+    //   console.log(i);
+    // }
+    len = list.length;
+    for ( var i = 0; i < len ; i++) {
+      html += '<li>' + list[i] + '</li>';
+      obj.innerHTML = html;
+    }
+  }
+  </script>
+</body>
+</html>

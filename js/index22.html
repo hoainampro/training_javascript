@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>javascript add list and remove list</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+      .btn {
+      color: blue;
+      padding-left: 20px;
+      }
+      .btn:hover {
+      cursor: pointer;
+      color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input type="text" name="js-name" placeholder="input charater" class="">
+        <button type="button" id="js-submit">Click</button>
+      </div>
+      <h1>The list Member appear</h1>
+      <ul id="js-member"></ul>
+    </div>
+    <script type="text/javascript">
+      var $button = document.getElementById('js-submit');
+      var $input = document.getElementsByName('js-name');
+      var $list = document.getElementById('js-member');
+
+     $button.addEventListener('click',function() {
+      var name = $input[0].value;
+      var $member = document.createElement('li');
+      var $link = document.createElement('a');
+          $link.className = 'btn';
+          $link.innerHTML = 'delete';
+          $member.innerHTML = name;
+          $member.appendChild($link);
+          $list.appendChild($member);
+
+          $link.addEventListener('click',function() {
+          $list.removeChild(this.parentNode);
+        });
+      });
+    </script>
+  </body>
+</html>

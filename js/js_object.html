@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <p id="name"></p>
+   <!--  <script type="text/javascript">
+      var a = 4;
+      var b = 10;
+      var c = a + b;
+      // var a = "le hoai nam";
+      document.getElementById('name').innerHTML = c;
+    </script> -->
+    <script type="text/javascript">
+       function Xe(chassisnumber, color, carnumber, numbermachines, numberwheel){
+         this.chassisnumber = chassisnumber;
+         this.color = color;
+         this.carnumber = carnumber;
+         this.numbermachines = numbermachines;
+         this.numberwheel = numberwheel
+       }
+
+       var carExciter = new Xe ( 9999,
+          "blue",
+          "92-h1-99999",
+          12454,
+          2)
+
+       }
+     document.getElementById('name').innerHTML = "carExciter is" + carExciter.chassisnumber;
+    </script>
+
+  </body>
+</html>

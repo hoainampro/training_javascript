@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><input type="text" name="" id="a"></p>
+<p><input type="text" name="" id="p"></p>
+<button onclick="cv_dt()">Try it</button>
+
+
+
+<script>
+function cv_dt() {
+
+var length = prompt("nhap so tinh dt");
+var width = prompt ("nhap so cv");
+
+
+var perimeter = (2 * length ) + (2 * width );
+var area = length * width ;
+
+document.getElementById("a").innerHTML ="Area of rectangle:"  + area;
+document.getElementById("p").innerHTML ="perimeter of rectangle:"  + perimeter ;
+}
+</script>
+
+</body>
+</html>

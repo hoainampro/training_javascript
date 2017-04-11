@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+<div>
+  <div>
+    <input type="text" name="js-name" placeholder="Nhập kí tự">
+    <button type="button" onclick="submit()">click</button>
+  </div>
+  <h1>Danh sách xuất hiện</h1>
+  <ul id="lists"></ul>
+</div>
+<script type="text/javascript">
+  var member = [];
+
+  var content = document.getElementsByName('js-name');
+  var object = document.getElementById('lists');
+
+  function submit() {
+    member.push(content[0].value);
+    console.log('member');
+
+    var html = '';
+    len = member.length;
+    for(var i = 0; i < len ; i++) {
+      html += '<li>' + member[i] + '</li>';
+    }
+    object.innerHTML = html;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <div id="results">
+
+    </div>
+      width:<input type="text" name="" id="width"><br>
+      height:<input type="text" name="" id="height"><br>
+      result:<input type="text" name="" id="result"><br>
+      <button type="submit" id="submit" onclick="tinh_tich()">click</button>
+
+    <script type="text/javascript">
+     function tinh_tich() {
+      var a = document.getElementById('width');
+      var b =  document.getElementById('height');
+      var result =  document.getElementById('result');
+
+      var tich=Number(a.value) * Number(b.value);
+
+      result.value = tich;
+     }
+      function tinh_cv() {
+      var a = document.getElementById('width');
+      var b =  document.getElementById('height');
+      var result =  document.getElementById('result');
+
+      var tich=Number(a.value) + Number(b.value) * 2;
+
+      result.value = tich;
+     }
+    </script>
+  </body>
+</html>

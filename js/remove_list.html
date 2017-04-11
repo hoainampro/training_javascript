@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <style type="text/css" media="screen">
+    li {
+      color: #000;
+      background-color: red;
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div>
+    <input type="text" name="js-name" placeholder="input charater" id="add">
+    <button type="button" onclick="addtoList()">Click</button>
+  </div>
+  <h1>The list appear</h1>
+  <ul id="js-member"></ul>
+</div>
+<script>
+  var list_array = [];
+
+  function addtoList() {
+    var addName = document.getElementById("add").value;
+    list_array.push(addName);
+    for( i = 0; i < list_array.length; i++) {
+      var newMember = "<li onClick='removeRecord(" + i + ");'>delete</li>" + list_array[i] + " <br>";
+    };
+    document.getElementById('js-member').innerHTML += newMember;
+  }
+
+  function removeRecord(i) {
+    list_array.splice(i, 1);
+    var newMember;
+    for( i = 0; i < list_array.length; i++) {
+      newMember += "<li onClick='removeRecord(" + i + ");'>delete</li>" + list_array[i] + " <br>";
+    };
+    document.getElementById('js-member').innerHTML = newMember;
+  }
+</script>
+</body>
+</html>

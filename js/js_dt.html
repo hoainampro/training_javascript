@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <div id="result">
+
+    </div>
+    <div id="result2">
+
+    </div>
+    <input type="text" name="" id="width"><br>
+    <input type="text" name="" id="height"><br>
+    <button type="button" name="" id="button" >click</button>
+    <script>
+      //Thuộc tính innerHTML dùng để lấy nội dung phần tử hoặc thay đổi nội dung phần tử HTML.
+      // tham chieu den 1 nut duy nhat den id can tim
+      // document.getElementById('result').innerHTML += 'tong';
+
+        button.addEventListener('click', function() {
+
+        var width =+ document.getElementById('width').value;
+        var height =+ document.getElementById('height').value;
+        dientich = width * height;
+        document.getElementById('result').innerHTML = dientich;
+        //cv
+        chuvi = (width + height) * 2;
+        document.getElementById('result2').innerHTML = chuvi;
+      });
+    </script>
+  </body>
+</html>

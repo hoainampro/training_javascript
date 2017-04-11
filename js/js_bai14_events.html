@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+  <!--   <input type="text" name="" value="" id="message" onkeyup="Show_result()">
+    <p id="result"></p>
+    <script>
+    //lay 2 the input va p
+    function Show_result() {
+
+      var input = document.getElementById('message');
+      var p = document.getElementById('result');
+
+      //gan noi dung cho p vao message
+      p.innerHTML = message.value;
+      }
+    </script> -->
+    <!-- tinh tong nhap 2 so  -->
+    <div>
+      <h2>function tinh khi nhap 2 so </h2>
+
+    </div>
+      So A: <input type="text" name="" value="" id="a" onkeyup="tich()">
+      So B:<input type="text" name="" value="" id="b" onkeyup="tich()">
+      Ket qua:<input type="text" name="" value="" id="result">
+   <!--  <script>
+      function tinh() {
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+        var result = document.getElementById('result');
+        // tong vao 2 o
+        var tong = parseInt(a.value) + parseInt(b.value);
+
+        if(!isNaN(tong)){
+          result.value = tong;
+        }
+      }
+      //isNaN nghĩa là IsNotaNumber, nếu không phải số ra kq true còn ngược lại là false
+    </script> -->
+    <script>
+      function tich() {
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+        var result = document.getElementById('result');
+        //nhan 2 so a va b
+        var tich = parseInt(a.value) * parseInt(b.value);
+
+        if(!isNaN(tich)) {
+          result.value = tich;
+        }
+      }
+    </script>
+  </body>
+</html>

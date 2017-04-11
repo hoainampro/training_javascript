@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>khai bao </title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        margin: 20px;
+      }
+      .shop {
+        width: 1000px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shop">
+      <div class="row">
+        <div class="col-md-6">
+             <table class="table table-bordered">
+              <thead>
+                  <tr class="success">
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                  </tr>
+              </thead>
+              <tbody id="show-cart"></tbody>
+              <tfoot id="show-total"></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var text = '';
+      var total = '';
+      var cartArray = [
+            {
+              id: '1',
+              name: 'product_1',
+              price: 10,
+              quatity: 2
+            },
+            {
+              id: '2',
+              name: 'product_2',
+              price: 2,
+              quatity: 4
+            }
+      ];
+      // var len = cartArray.length;
+      // for ( var i in cartArray ) {
+      //   console.log(cartArray[i]);
+      // }
+
+      // for (var i = 0; i < len; i++)
+       for ( var i in cartArray ) {
+          text += "<tr>";
+          text += "<td>" + cartArray[i].id + "</td>";
+          text += "<td>" + cartArray[i].name + "</td>";
+          text += "<td style='text-align: right;color:red'>" + cartArray[i].price + "</td>";
+          text += "<td style='text-align: right;color:red'>" + cartArray[i].quatity + "</td>";
+          text += "<td style='text-align: right;color:red;font-weight:bold'>" + cartArray[i].price * cartArray[i].quatity;+ "</td>";
+          total +=  cartArray[i].quatity + cartArray[i].quatity
+          text += "</tr>";
+          document.getElementById('show-cart').innerHTML = text;
+        }
+         document.getElementById('show-total').innerHTML = total;
+     </script>
+   </body>
+</html>
