@@ -37,19 +37,18 @@
     </div>
     <script type="text/javascript">
       var text = '';
-      var total = '';
       var cartArray = [
             {
               id: '1',
               name: 'product_1',
               price: 10,
-              quatity: 2
+              quatity: 3
             },
             {
               id: '2',
               name: 'product_2',
               price: 2,
-              quatity: 4
+              quatity: 15
             }
       ];
       // var len = cartArray.length;
@@ -64,12 +63,18 @@
           text += "<td>" + cartArray[i].name + "</td>";
           text += "<td style='text-align: right;color:red'>" + cartArray[i].price + "</td>";
           text += "<td style='text-align: right;color:red'>" + cartArray[i].quatity + "</td>";
-          text += "<td style='text-align: right;color:red;font-weight:bold'>" + cartArray[i].price * cartArray[i].quatity;+ "</td>";
-          total +=  cartArray[i].quatity + cartArray[i].quatity
+          text += "<td style='text-align: right;color:red;font-weight:bold'>" + cartArray[i].price * cartArray[i].quatity + "</td>";
           text += "</tr>";
           document.getElementById('show-cart').innerHTML = text;
-        }
-         document.getElementById('show-total').innerHTML = total;
+         }
+          function countCart() {
+            var totalCount = 0;
+            for( var i in cartArray) {
+              totalCount += (cartArray[i].quatity * cartArray[i].price);
+            }
+              return totalCount;
+            }
+         document.getElementById('show-total').innerHTML = countCart();
      </script>
    </body>
 </html>
