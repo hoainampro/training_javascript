@@ -30,7 +30,12 @@
                   </tr>
               </thead>
               <tbody id="show-cart"></tbody>
-              <tfoot id="show-total"></tfoot>
+              <tfoot>
+                <tr>
+                  <td colspan="4" style="text-align: center; color:green;">Sum</td>
+                  <td id="show-total" style="text-align: center;"></td>
+                </tr>
+              </tfoot>
           </table>
         </div>
       </div>
@@ -42,15 +47,21 @@
               id: '1',
               name: 'product_1',
               price: 10,
-              quatity: 3
+              quatity: 2
             },
             {
               id: '2',
               name: 'product_2',
               price: 2,
               quatity: 15
+            },
+            {
+              id: '2',
+              name: 'product_2',
+              price: 2,
+              quatity: 5
             }
-      ];
+        ];
       // var len = cartArray.length;
       // for ( var i in cartArray ) {
       //   console.log(cartArray[i]);
